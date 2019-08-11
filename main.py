@@ -27,12 +27,14 @@ def main():
     f.close()
     #cria uma hashtable com o dobro do tamanho do primeiro arquivo
     hash_table = [[] for _ in range(2*len(conteudo))]
+    print('Efetuando leitura do primeiro arquivo')
     for l in conteudo:
         arr = l.split(',')
         p = Pessoa(arr[0],arr[1],arr[2])
         inserir(hash_table, hash(p.nome), p)
     
     f = open('exemplo2.txt', 'r')
+    print('Efetuando leitura do segundo arquivo')
     for l in f:
         arr = l.split(',')
         p = Pessoa(arr[0],arr[1],arr[2])
