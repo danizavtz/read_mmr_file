@@ -9,9 +9,6 @@ class Pessoa:
     def __str__(self):
         return 'Nome: {}, idade: {}, email: {}'.format(self.nome, self.idade, self.email)
 
-    def incrementa_repeticoes(self):
-        self.quantidade_repeticoes += 1
-
     def __eq__(self, outro):
         if isinstance(outro, Pessoa):
             return self.nome == outro.nome and self.idade == outro.idade and self.email == outro.email
